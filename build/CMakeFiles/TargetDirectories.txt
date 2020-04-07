@@ -1,0 +1,3 @@
+/root/ahmed/Projects-Mine/CppND-First-Mini-Project/build/CMakeFiles/rebuild_cache.dir
+/root/ahmed/Projects-Mine/CppND-First-Mini-Project/build/CMakeFiles/CreatedMap.dir
+/root/ahmed/Projects-Mine/CppND-First-Mini-Project/build/CMakeFiles/edit_cache.dir

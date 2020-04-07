@@ -1,0 +1,20 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/root/ahmed/Projects-Mine/CppND-First-Mini-Project/src/main.cpp
+iostream
+-
+string
+-
+vector
+-
+fstream
+-
+sstream
+-
+

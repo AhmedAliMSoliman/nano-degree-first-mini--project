@@ -7,6 +7,7 @@ using std::cout;
 using std::ifstream;
 using std::istringstream;
 using std::string;
+
 using std::vector;
 
 enum class State {kEmpty, kObstacle};
