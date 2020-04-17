@@ -54,13 +54,13 @@ std::vector<std::vector<State>> ReadBoardFile(std::string path)
 }
 
 
-std::string CellString(State cell) 
-{
-  switch(cell) {
-    case State::kObstacle: return "⛰️   ";
-    default: return "0   "; 
-  }
-}
+// std::string CellString(State cell) 
+// {
+//   switch(cell) {
+//     case State::kObstacle: return "⛰️   ";
+//     default: return "0   "; 
+//   }
+// }
 
 void PrintBoard(const std::vector<std::vector<State>> board) 
 {

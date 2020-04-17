@@ -65,7 +65,7 @@ std::vector<std::vector<State>> Search(std::vector<std::vector<State>> grid, int
     	}
 
 		// If we're not done, expand search to current node's neighbors.
-    	// ExpandNeighbors()
+    	ExpandNeighbors(current, goal, open, grid);
 	}
 
 	// We've run out of new nodes to explore and haven't found a path.
@@ -138,4 +138,68 @@ bool CheckValidCell(int x , int y, std::vector<std::vector<State>>& grid)
   	if (on_grid_x && on_grid_y)
     	return grid[x][y] == State::kEmpty;
   	return false;
+}
+
+
+/** 
+ * Expand current nodes's neighbors and add them to the open list.
+ */
+// To Complete This Exercise:
+// Write a void ExpandNeighbors function that accepts references to the following:
+// The current node,
+// the open vector,
+// the grid, and
+// an int array for the goal coordinates.
+// The ExpandNeighbors function should implement the functionality given in the pseudocode below:
+// TODO: ExpandNeighbors {
+
+  // TODO: Get current node's data.
+
+  // TODO: Loop through current node's potential neighbors.
+
+    // TODO: Check that the potential neighbor's x2 and y2 values are on the grid and not closed.
+
+      // TODO: Increment g value, compute h value, and add neighbor to open list.
+
+// } TODO: End function
+void ExpandNeighbors(const std::vector<int> &current, int goal[2], std::vector<std::vector<int>> &openlist, std::vector<std::vector<State>> &grid)
+{
+	//The current node's data
+	int x = current[0];
+	int y = current[1];
+	int g = current[2];
+
+	//Looping through the potential 
+	for(int i = 0 ; i < 4 ; i++)
+	{
+		int x2 = x + delta[i][0];
+		int y2 = y + delta[i][1];
+
+		// Check that the potential neighbor's x2 and y2 values are on the grid and not closed.
+		if (CheckValidCell(x2 , y2 , grid))
+		{
+			//Increment g value and add neighbor to open list.
+			int g2 = g + 1;
+			int h2 = Heuristic(x2 , y2 , goal[0], goal[1]);
+
+			AddToOpen(x2 , y2 , g2 , h2, openlist, grid);
+		}
+	}
+
+} 
+
+
+// To Complete This Exercise:
+// Add a kStart and kFinish to the State enum.
+// Set the grid cell to kStart for the initial coordinates and kFinish for the goal coordinates. This will happen in the Search function.
+// In CellString, add cases to return "🚦 " for kStart and "🏁 " for kFinish.
+std::string CellString(State cell) 
+{
+  switch(cell) {
+    case State::kObstacle: return "⛰️   ";
+    case State::kPath: return "🚗   ";
+    case State::kStart: return "🚦   ";
+    case State::kFinish: return "🏁   ";
+    default: return "0   "; 
+  }
 }

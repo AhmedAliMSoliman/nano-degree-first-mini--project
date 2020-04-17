@@ -10,6 +10,7 @@
 #include "../include/test_compare.cpp"
 #include "../include/test_search.cpp"
 #include "../include/test_check.cpp"
+#include "../include/test_exapnd.cpp"
 
 //Tests
 void Tests()
@@ -19,6 +20,7 @@ void Tests()
 	TestCompare();
 	TestSearch();
 	TestCheckValidCell();
+	TestExpandNeighbors();
 }
 
 main() 

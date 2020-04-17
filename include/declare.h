@@ -2,7 +2,10 @@
 #define DECLARE
 
 
-enum class State {kEmpty, kObstacle, kClosed, kPath};
+enum class State {kEmpty, kObstacle, kClosed, kPath, kStart, kFinish};
+
+// directional deltas
+const int delta[4][2]{{-1, 0}, {0, -1}, {1, 0}, {0, 1}};
 
 
 // Function Decleration
@@ -18,6 +21,7 @@ void AddToOpen(int x , int y , int g , int h, std::vector<std::vector<int>>& ope
 bool Compare(const std::vector<int> a , const std::vector<int> b);
 void CellSort(std::vector<std::vector<int>> *v);
 bool CheckValidCell(int x , int y, std::vector<std::vector<State>>& grid);
+void ExpandNeighbors(const std::vector<int> &current, int goal[2], std::vector<std::vector<int>> &openlist, std::vector<std::vector<State>> &grid);
 
 
 
