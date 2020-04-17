@@ -125,3 +125,17 @@ void CellSort(std::vector<std::vector<int>> *v)
 {
   	std::sort(v->begin(), v->end(), Compare);
 }
+
+
+// To Complete This Exercise:
+// Write a function bool CheckValidCell that accepts two ints for the x and y coordinates and a reference to the grid. The function should do two things:
+// 1. Check that the (x, y) coordinate pair is on the grid.
+// Check that the grid at (x, y) is kEmpty (this is the default case if the grid cell is not kClosed or a kObstacle). If both of these conditions are true, then CheckValidCell should return true. Otherwise, it should return false.
+bool CheckValidCell(int x , int y, std::vector<std::vector<State>>& grid)
+{
+	bool on_grid_x = (x >= 0 && x < grid.size());
+  	bool on_grid_y = (y >= 0 && y < grid[0].size());
+  	if (on_grid_x && on_grid_y)
+    	return grid[x][y] == State::kEmpty;
+  	return false;
+}

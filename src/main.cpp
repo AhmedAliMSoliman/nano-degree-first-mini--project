@@ -9,6 +9,7 @@
 #include "../include/test_addtoopen.cpp"
 #include "../include/test_compare.cpp"
 #include "../include/test_search.cpp"
+#include "../include/test_check.cpp"
 
 //Tests
 void Tests()
@@ -17,6 +18,7 @@ void Tests()
 	TestAddToOpen();
 	TestCompare();
 	TestSearch();
+	TestCheckValidCell();
 }
 
 main() 

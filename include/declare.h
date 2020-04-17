@@ -17,6 +17,8 @@ int Heuristic(int x1, int y1, int x2, int y2);
 void AddToOpen(int x , int y , int g , int h, std::vector<std::vector<int>>& openlist, std::vector<std::vector<State>>& grid);
 bool Compare(const std::vector<int> a , const std::vector<int> b);
 void CellSort(std::vector<std::vector<int>> *v);
+bool CheckValidCell(int x , int y, std::vector<std::vector<State>>& grid);
+
 
 
 #endif
