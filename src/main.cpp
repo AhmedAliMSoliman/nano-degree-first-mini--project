@@ -4,24 +4,7 @@
 
 
 #include "../include/declare.h"
-// #include "../include/test.cpp"
-#include "../include/test_heuristic.cpp"
-#include "../include/test_addtoopen.cpp"
-#include "../include/test_compare.cpp"
-#include "../include/test_search.cpp"
-#include "../include/test_check.cpp"
-#include "../include/test_exapnd.cpp"
 
-//Tests
-void Tests()
-{
-	TestHeuristic();
-	TestAddToOpen();
-	TestCompare();
-	TestSearch();
-	TestCheckValidCell();
-	TestExpandNeighbors();
-}
 
 main() 
 {
@@ -34,8 +17,6 @@ main()
 
 	PrintBoard(solution);
 
-	
-	Tests();
 }
 
 // int main()

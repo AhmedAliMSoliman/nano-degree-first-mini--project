@@ -5,6 +5,6 @@ add_definitions(-std=c++17)
 set(CXX_FLAGS "-Wall")
 set(CMAKE_CXX_FLAGS, "${CXX_FLAGS}")
 
-project(search)
+project(maz_search)
 
-add_executable(search src/main.cpp src/read_print.cpp src/search.cpp)
+add_executable(maz_search src/main.cpp src/read_print.cpp src/search.cpp)
