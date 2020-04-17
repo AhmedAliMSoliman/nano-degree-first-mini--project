@@ -2,8 +2,17 @@
 #include <string>
 #include <vector>
 
+
 #include "../include/declare.h"
 #include "../include/test_heuristic.cpp"
+#include "../include/test_addtoopen.cpp"
+
+//Tests
+void Tests()
+{
+	TestHeuristic();
+	TestAddToOpen();
+}
 
 main() 
 {
@@ -16,9 +25,8 @@ main()
 
 	PrintBoard(solution);
 
-	// Tests
-	TestHeuristic();
-
+	
+	Tests();
 }
 
 // int main()

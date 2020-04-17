@@ -26,3 +26,17 @@ int Heuristic(int x1, int y1, int x2, int y2)
 	manhattan = abs(x2 - x1) + abs(y2 - y1);
 	return manhattan;
 }
+
+// To Complete This Exercise:
+// 1. Write a void AddToOpen function which accepts the following arguments:
+// * Four ints, one for each of the x, y, g, and h values.
+// * References to one vector<vector<int>> for the vector of open nodes.
+// Reference to one std::vector<std::vector<State>> for the grid.
+// 2. The AddToOpen function should do two things:
+// Create a vector<int> node with the form {x, y, g, h} and push the node to the back of the open vector.
+// Set the grid value for the x and y coordinates to the enum value kClosed. We have added kClosed to the set of enum values
+void AddToOpen(int x , int y , int g , int h, std::vector<std::vector<int>>& openlist, std::vector<std::vector<State>>& grid)
+{
+	openlist.push_back(std::vector<int>{x, y, g, h});
+	grid[x][y] = State::kClosed;
+}
