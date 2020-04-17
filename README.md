@@ -60,3 +60,16 @@ Search( grid, initial_point, goal_point ) :
 
 Summary
 The A* algorithm finds a path from the start node to the end node by checking for open neighbors of the current node, computing a heuristic for each of the neighbors, and adding those neighbors to the list of open nodes to explore next. The next node to explore is the one with the lowest total cost + heuristic (g + h). This process is repeated until the end is found, as long as there are still open nodes to explore.
+
+## Code structures
+
+The code for the A* search algorithm has been broken down into the following functions:
+```
+CellSort() - sorts the open list according to the sum of h + g
+ExpandNeighbors() - loops through the current node's neighbors and calls appropriate functions to add neighbors to the open list
+CheckValidCell() - ensures that the potential neighbor coordinates are on the grid and that the cell is open
+Heuristic() - computes the distance to the goal
+AddToOpen() - adds the node to the open list and marks the grid cell as closed
+```
+
+![CodeStructure](assets/a-star-code-structure.png)
