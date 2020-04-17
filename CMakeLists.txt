@@ -7,4 +7,4 @@ set(CMAKE_CXX_FLAGS, "${CXX_FLAGS}")
 
 project(search)
 
-add_executable(search src/main.cpp)
+add_executable(search src/main.cpp src/read_print.cpp src/search.cpp)
