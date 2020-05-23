@@ -6,7 +6,7 @@
 #include "../include/declare.h"
 
 
-main() 
+int main() 
 {
 	//Declare "init" and "goal" arrays with values {0, 0} and {4, 5} respectively.
   	int init[2] {0 , 0};
