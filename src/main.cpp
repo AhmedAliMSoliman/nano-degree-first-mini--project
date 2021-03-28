@@ -12,10 +12,15 @@ int main()
   	int init[2] {0 , 0};
   	int goal[2] {4 , 5};
 	
-	auto board = ReadBoardFile("../include/1.board.txt");
-	auto solution = Search(board, init, goal);
+	auto board1 = ReadBoardFile("../include/1.board.txt");
+	auto solution = Search(board1, init, goal);
+
+	auto board2 = ReadBoardFile("../include/2.board.txt");
+	auto solution2 = Search(board2, init, goal);
 
 	PrintBoard(solution);
+	std::cout << "-----------\n";
+	PrintBoard(solution2);
 
 }
 
