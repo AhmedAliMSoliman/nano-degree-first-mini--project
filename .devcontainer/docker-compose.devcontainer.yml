@@ -1,0 +1,11 @@
+version: '3.8'
+services:
+  nanodegree-mini-project:
+    build:
+      context: .
+      dockerfile: Dockerfile.devcontainer
+    image: nanodegree-mini-project
+    container_name: nanodegree-mini-project-devcontainer
+    volumes:
+      - ../:/nanodegree
+    tty: true
